@@ -49,7 +49,7 @@ public class GUI {
 	private JTextField relationship_4;
 	private JTextField relationship_5;
 	private JTextField relationship_6;
-	private JTextField relationshp_7;
+	private JTextField relationship_7;
 	private JTextField relationship_8;
 	private JTextField relationship_9;
 	private JTextField relationship_10;
@@ -313,6 +313,90 @@ public class GUI {
 		unixServerCountOPOD.setBounds(338, 106, 276, 20);
 		unixServerCountOPOD.setSelectedItem("2");
 		OPOD.add(unixServerCountOPOD);
+		unixServerCountOPOD.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(1 <= unixServerCountOPOD.getSelectedIndex()) {
+					logicalName_1.setVisible(true);
+					relationship_1.setVisible(true);
+				}
+				else {
+					logicalName_1.setVisible(false);
+					relationship_1.setVisible(false);
+				}
+				if(2 <= unixServerCountOPOD.getSelectedIndex()) {
+					logicalName_2.setVisible(true);
+					relationship_2.setVisible(true);
+				}
+				else {
+					logicalName_2.setVisible(false);
+					relationship_2.setVisible(false);
+				}
+				if(3 <= unixServerCountOPOD.getSelectedIndex()) {
+					logicalName_3.setVisible(true);
+					relationship_3.setVisible(true);
+				}
+				else {
+					logicalName_3.setVisible(false);
+					relationship_3.setVisible(false);
+				}
+				if(4 <= unixServerCountOPOD.getSelectedIndex()) {
+					logicalName_4.setVisible(true);
+					relationship_4.setVisible(true);
+				}
+				else {
+					logicalName_4.setVisible(false);
+					relationship_4.setVisible(false);
+				}
+				if(5 <= unixServerCountOPOD.getSelectedIndex()) {
+					logicalName_5.setVisible(true);
+					relationship_5.setVisible(true);
+				}
+				else {
+					logicalName_5.setVisible(false);
+					relationship_5.setVisible(false);
+				}
+				if(6 <= unixServerCountOPOD.getSelectedIndex()) {
+					logicalName_6.setVisible(true);
+					relationship_6.setVisible(true);
+				}
+				else {
+					logicalName_6.setVisible(false);
+					relationship_6.setVisible(false);
+				}
+				if(7 <= unixServerCountOPOD.getSelectedIndex()) {
+					logicalName_7.setVisible(true);
+					relationship_7.setVisible(true);
+				}
+				else {
+					logicalName_7.setVisible(false);
+					relationship_7.setVisible(false);
+				}
+				if(8 <= unixServerCountOPOD.getSelectedIndex()) {
+					logicalName_8.setVisible(true);
+					relationship_8.setVisible(true);
+				}
+				else {
+					logicalName_8.setVisible(false);
+					relationship_8.setVisible(false);
+				}
+				if(9 <= unixServerCountOPOD.getSelectedIndex()) {
+					logicalName_9.setVisible(true);
+					relationship_9.setVisible(true);
+				}
+				else {
+					logicalName_9.setVisible(false);
+					relationship_9.setVisible(false);
+				}
+				if(10 <= unixServerCountOPOD.getSelectedIndex()) {
+					logicalName_10.setVisible(true);
+					relationship_10.setVisible(true);
+				}
+				else {
+					logicalName_10.setVisible(false);
+					relationship_10.setVisible(false);
+				}
+			}
+		});
 
 		// Environment comboBox for OPOD
 		String[] environmentsOPOD = { "", "Production", "Pre-Production", "Training", "Continuity", "eTest", "Test", "Development",
@@ -459,48 +543,56 @@ public class GUI {
 		logicalName_3 = new JTextField();
 		logicalName_3.setColumns(10);
 		logicalName_3.setBounds(672, 147, 116, 22);
+		logicalName_3.setVisible(false);
 		OPOD.add(logicalName_3);
 		
 		// logical name text field 4 in OPOD page
 		logicalName_4 = new JTextField();
 		logicalName_4.setColumns(10);
 		logicalName_4.setBounds(672, 182, 116, 22);
+		logicalName_4.setVisible(false);
 		OPOD.add(logicalName_4);
 		
 		// logical name text field 5 in OPOD page
 		logicalName_5 = new JTextField();
 		logicalName_5.setColumns(10);
 		logicalName_5.setBounds(672, 216, 116, 22);
+		logicalName_5.setVisible(false);
 		OPOD.add(logicalName_5);
 		
 		// logical name text field 6 in OPOD page
 		logicalName_6 = new JTextField();
 		logicalName_6.setColumns(10);
 		logicalName_6.setBounds(672, 252, 116, 22);
+		logicalName_6.setVisible(false);
 		OPOD.add(logicalName_6);
 		
 		// logical name text field 7 in OPOD page
 		logicalName_7 = new JTextField();
 		logicalName_7.setColumns(10);
 		logicalName_7.setBounds(672, 287, 116, 22);
+		logicalName_7.setVisible(false);
 		OPOD.add(logicalName_7);
 		
 		// logical name text field 8 in OPOD page
 		logicalName_8 = new JTextField();
 		logicalName_8.setColumns(10);
 		logicalName_8.setBounds(672, 322, 116, 22);
+		logicalName_8.setVisible(false);
 		OPOD.add(logicalName_8);
 		
 		// logical name text field 9 in OPOD page
 		logicalName_9 = new JTextField();
 		logicalName_9.setColumns(10);
 		logicalName_9.setBounds(672, 355, 116, 22);
+		logicalName_9.setVisible(false);
 		OPOD.add(logicalName_9);
 		
 		// logical name text field 10 in OPOD page
 		logicalName_10 = new JTextField();
 		logicalName_10.setColumns(10);
 		logicalName_10.setBounds(672, 390, 116, 22);
+		logicalName_10.setVisible(false);
 		OPOD.add(logicalName_10);
 		
 		// server relationship text field 1 in OPOD page
@@ -519,48 +611,56 @@ public class GUI {
 		relationship_3 = new JTextField();
 		relationship_3.setColumns(10);
 		relationship_3.setBounds(828, 147, 116, 22);
+		relationship_3.setVisible(false);
 		OPOD.add(relationship_3);
 		
 		// server relationship text field 4 in OPOD page
 		relationship_4 = new JTextField();
 		relationship_4.setColumns(10);
 		relationship_4.setBounds(828, 182, 116, 22);
+		relationship_4.setVisible(false);
 		OPOD.add(relationship_4);
 		
 		// server relationship text field 5 in OPOD page
 		relationship_5 = new JTextField();
 		relationship_5.setColumns(10);
 		relationship_5.setBounds(828, 216, 116, 22);
+		relationship_5.setVisible(false);
 		OPOD.add(relationship_5);
 		
 		// server relationship text field 6 in OPOD page
 		relationship_6 = new JTextField();
 		relationship_6.setColumns(10);
 		relationship_6.setBounds(828, 252, 116, 22);
+		relationship_6.setVisible(false);
 		OPOD.add(relationship_6);
 		
 		// server relationship text field 7 in OPOD page
-		relationshp_7 = new JTextField();
-		relationshp_7.setColumns(10);
-		relationshp_7.setBounds(828, 287, 116, 22);
-		OPOD.add(relationshp_7);
+		relationship_7 = new JTextField();
+		relationship_7.setColumns(10);
+		relationship_7.setBounds(828, 287, 116, 22);
+		relationship_7.setVisible(false);
+		OPOD.add(relationship_7);
 		
 		// server relationship text field 8 in OPOD page
 		relationship_8 = new JTextField();
 		relationship_8.setColumns(10);
 		relationship_8.setBounds(828, 322, 116, 22);
+		relationship_8.setVisible(false);
 		OPOD.add(relationship_8);
 		
 		// server relationship text field 9 in OPOD page
 		relationship_9 = new JTextField();
 		relationship_9.setColumns(10);
 		relationship_9.setBounds(828, 355, 116, 22);
+		relationship_9.setVisible(false);
 		OPOD.add(relationship_9);
 		
 		// server relationship text field 10 in OPOD page
 		relationship_10 = new JTextField();
 		relationship_10.setColumns(10);
 		relationship_10.setBounds(828, 390, 116, 22);
+		relationship_10.setVisible(false);
 		OPOD.add(relationship_10);
 		
 		// label for cluster name in OPOD page
@@ -584,6 +684,122 @@ public class GUI {
 		JComboBox numDatabasesCB = new JComboBox(numDatabasesOpts);
 		numDatabasesCB.setBounds(223, 483, 116, 22);
 		OPOD.add(numDatabasesCB);
+		numDatabasesCB.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(0 <= numDatabasesCB.getSelectedIndex()) {
+					databaseName_1.setVisible(true);
+					version_1.setVisible(true);
+					relationshipTF_1.setVisible(true);
+					primaryTF_1.setVisible(true);
+					backupTypeTF_1.setVisible(true);
+				}
+				else {
+					databaseName_1.setVisible(false);
+					version_1.setVisible(false);
+					relationshipTF_1.setVisible(false);
+					primaryTF_1.setVisible(false);
+					backupTypeTF_1.setVisible(false);
+				}
+				if(1 <= numDatabasesCB.getSelectedIndex()) {
+					databaseName_2.setVisible(true);
+					version_2.setVisible(true);
+					relationshipTF_2.setVisible(true);
+					primaryTF_2.setVisible(true);
+					backupTypeTF_2.setVisible(true);
+				}
+				else {
+					databaseName_2.setVisible(false);
+					version_2.setVisible(false);
+					relationshipTF_2.setVisible(false);
+					primaryTF_2.setVisible(false);
+					backupTypeTF_2.setVisible(false);
+				}
+				if(2 <= numDatabasesCB.getSelectedIndex()) {
+					databaseName_3.setVisible(true);
+					version_3.setVisible(true);
+					relationshipTF_3.setVisible(true);
+					primaryTF_3.setVisible(true);
+					backupTypeTF_3.setVisible(true);
+				}
+				else {
+					databaseName_3.setVisible(false);
+					version_3.setVisible(false);
+					relationshipTF_3.setVisible(false);
+					primaryTF_3.setVisible(false);
+					backupTypeTF_3.setVisible(false);
+				}
+				if(3 <= numDatabasesCB.getSelectedIndex()) {
+					databaseName_4.setVisible(true);
+					version_4.setVisible(true);
+					relationshipTF_4.setVisible(true);
+					primaryTF_4.setVisible(true);
+					backupTypeTF_4.setVisible(true);
+				}
+				else {
+					databaseName_4.setVisible(false);
+					version_4.setVisible(false);
+					relationshipTF_4.setVisible(false);
+					primaryTF_4.setVisible(false);
+					backupTypeTF_4.setVisible(false);
+				}
+				if(4 <= numDatabasesCB.getSelectedIndex()) {
+					databaseName_5.setVisible(true);
+					version_5.setVisible(true);
+					relationshipTF_5.setVisible(true);
+					primaryTF_5.setVisible(true);
+					backupTypeTF_5.setVisible(true);
+				}
+				else {
+					databaseName_5.setVisible(false);
+					version_5.setVisible(false);
+					relationshipTF_5.setVisible(false);
+					primaryTF_5.setVisible(false);
+					backupTypeTF_5.setVisible(false);
+				}
+				if(5 <= numDatabasesCB.getSelectedIndex()) {
+					databaseName_6.setVisible(true);
+					version_6.setVisible(true);
+					relationshipTF_6.setVisible(true);
+					primaryTF_6.setVisible(true);
+					backupTypeTF_6.setVisible(true);
+				}
+				else {
+					databaseName_6.setVisible(false);
+					version_6.setVisible(false);
+					relationshipTF_6.setVisible(false);
+					primaryTF_6.setVisible(false);
+					backupTypeTF_6.setVisible(false);
+				}
+				if(6 <= numDatabasesCB.getSelectedIndex()) {
+					databaseName_7.setVisible(true);
+					version_7.setVisible(true);
+					relationshipTF_7.setVisible(true);
+					primaryTF_7.setVisible(true);
+					backupTypeTF_7.setVisible(true);
+				}
+				else {
+					databaseName_7.setVisible(false);
+					version_7.setVisible(false);
+					relationshipTF_7.setVisible(false);
+					primaryTF_7.setVisible(false);
+					backupTypeTF_7.setVisible(false);
+				}
+				if(7 <= numDatabasesCB.getSelectedIndex()) {
+					databaseName_8.setVisible(true);
+					version_8.setVisible(true);
+					relationshipTF_8.setVisible(true);
+					primaryTF_8.setVisible(true);
+					backupTypeTF_8.setVisible(true);
+				}
+				else {
+					databaseName_8.setVisible(false);
+					version_8.setVisible(false);
+					relationshipTF_8.setVisible(false);
+					primaryTF_8.setVisible(false);
+					backupTypeTF_8.setVisible(false);
+				}
+			}
+		});
 		
 		// label for Database name in OPOD page
 		JLabel lblDatabaseName = new JLabel("Database Name");
@@ -620,42 +836,49 @@ public class GUI {
 		databaseName_2 = new JTextField();
 		databaseName_2.setColumns(10);
 		databaseName_2.setBounds(10, 569, 116, 22);
+		databaseName_2.setVisible(false);
 		OPOD.add(databaseName_2);
 		
 		// database name text field 3 in OPOD page
 		databaseName_3 = new JTextField();
 		databaseName_3.setColumns(10);
 		databaseName_3.setBounds(10, 597, 116, 22);
+		databaseName_3.setVisible(false);
 		OPOD.add(databaseName_3);
 		
 		// database name text field 4 in OPOD page
 		databaseName_4 = new JTextField();
 		databaseName_4.setColumns(10);
 		databaseName_4.setBounds(10, 624, 116, 22);
+		databaseName_4.setVisible(false);
 		OPOD.add(databaseName_4);
 		
 		// database name text field 5 in OPOD page
 		databaseName_5 = new JTextField();
 		databaseName_5.setColumns(10);
 		databaseName_5.setBounds(10, 651, 116, 22);
+		databaseName_5.setVisible(false);
 		OPOD.add(databaseName_5);
 		
 		// database name text field 6 in OPOD page
 		databaseName_6 = new JTextField();
 		databaseName_6.setColumns(10);
 		databaseName_6.setBounds(10, 678, 116, 22);
+		databaseName_6.setVisible(false);
 		OPOD.add(databaseName_6);
 		
 		// database name text field 7 in OPOD page
 		databaseName_7 = new JTextField();
 		databaseName_7.setColumns(10);
 		databaseName_7.setBounds(10, 705, 116, 22);
+		databaseName_7.setVisible(false);
 		OPOD.add(databaseName_7);
 		
 		// database name text field 8 in OPOD page
 		databaseName_8 = new JTextField();
 		databaseName_8.setColumns(10);
 		databaseName_8.setBounds(10, 730, 116, 22);
+		databaseName_8.setVisible(false);
 		OPOD.add(databaseName_8);
 		
 		// version text field 1 in OPOD page
@@ -668,42 +891,49 @@ public class GUI {
 		version_2 = new JTextField();
 		version_2.setColumns(10);
 		version_2.setBounds(138, 569, 116, 22);
+		version_2.setVisible(false);
 		OPOD.add(version_2);
 		
 		// version text field 3 in OPOD page
 		version_3 = new JTextField();
 		version_3.setColumns(10);
 		version_3.setBounds(138, 597, 116, 22);
+		version_3.setVisible(false);
 		OPOD.add(version_3);
 		
 		// version text field 4 in OPOD page
 		version_4 = new JTextField();
 		version_4.setColumns(10);
 		version_4.setBounds(138, 624, 116, 22);
+		version_4.setVisible(false);
 		OPOD.add(version_4);
 		
 		// version text field 5 in OPOD page
 		version_5 = new JTextField();
 		version_5.setColumns(10);
 		version_5.setBounds(138, 651, 116, 22);
+		version_5.setVisible(false);
 		OPOD.add(version_5);
 		
 		// version text field 6 in OPOD page
 		version_6 = new JTextField();
 		version_6.setColumns(10);
 		version_6.setBounds(138, 678, 116, 22);
+		version_6.setVisible(false);
 		OPOD.add(version_6);
 		
 		// version text field 7 in OPOD page
 		version_7 = new JTextField();
 		version_7.setColumns(10);
 		version_7.setBounds(138, 705, 116, 22);
+		version_7.setVisible(false);
 		OPOD.add(version_7);
 		
 		// version text field 8 in OPOD page
 		version_8 = new JTextField();
 		version_8.setColumns(10);
 		version_8.setBounds(138, 730, 116, 22);
+		version_8.setVisible(false);
 		OPOD.add(version_8);
 		
 		// relationship text field 1 in OPOD page
@@ -716,42 +946,49 @@ public class GUI {
 		relationshipTF_2 = new JTextField();
 		relationshipTF_2.setColumns(10);
 		relationshipTF_2.setBounds(266, 569, 116, 22);
+		relationshipTF_2.setVisible(false);
 		OPOD.add(relationshipTF_2);
 		
 		// relationship text field 3 in OPOD page
 		relationshipTF_3 = new JTextField();
 		relationshipTF_3.setColumns(10);
 		relationshipTF_3.setBounds(266, 597, 116, 22);
+		relationshipTF_3.setVisible(false);
 		OPOD.add(relationshipTF_3);
 		
 		// relationship text field 4 in OPOD page
 		relationshipTF_4 = new JTextField();
 		relationshipTF_4.setColumns(10);
 		relationshipTF_4.setBounds(266, 624, 116, 22);
+		relationshipTF_4.setVisible(false);
 		OPOD.add(relationshipTF_4);
 		
 		// relationship text field 5 in OPOD page
 		relationshipTF_5 = new JTextField();
 		relationshipTF_5.setColumns(10);
 		relationshipTF_5.setBounds(266, 651, 116, 22);
+		relationshipTF_5.setVisible(false);
 		OPOD.add(relationshipTF_5);
 		
 		// relationship text field 6 in OPOD page
 		relationshipTF_6 = new JTextField();
 		relationshipTF_6.setColumns(10);
 		relationshipTF_6.setBounds(266, 678, 116, 22);
+		relationshipTF_6.setVisible(false);
 		OPOD.add(relationshipTF_6);
 		
 		// relationship text field 7 in OPOD page
 		relationshipTF_7 = new JTextField();
 		relationshipTF_7.setColumns(10);
 		relationshipTF_7.setBounds(266, 705, 116, 22);
+		relationshipTF_7.setVisible(false);
 		OPOD.add(relationshipTF_7);
 		
 		// relationship text field 8 in OPOD page
 		relationshipTF_8 = new JTextField();
 		relationshipTF_8.setColumns(10);
 		relationshipTF_8.setBounds(266, 730, 116, 22);
+		relationshipTF_8.setVisible(false);
 		OPOD.add(relationshipTF_8);
 		
 		// primary text field 1 in OPOD page
@@ -764,42 +1001,49 @@ public class GUI {
 		primaryTF_2 = new JTextField();
 		primaryTF_2.setColumns(10);
 		primaryTF_2.setBounds(394, 569, 116, 22);
+		primaryTF_2.setVisible(false);
 		OPOD.add(primaryTF_2);
 		
 		// primary text field 3 in OPOD page
 		primaryTF_3 = new JTextField();
 		primaryTF_3.setColumns(10);
 		primaryTF_3.setBounds(394, 597, 116, 22);
+		primaryTF_3.setVisible(false);
 		OPOD.add(primaryTF_3);
 		
 		// primary text field 4 in OPOD page
 		primaryTF_4 = new JTextField();
 		primaryTF_4.setColumns(10);
 		primaryTF_4.setBounds(394, 624, 116, 22);
+		primaryTF_4.setVisible(false);
 		OPOD.add(primaryTF_4);
 		
 		// primary text field 5 in OPOD page
 		primaryTF_5 = new JTextField();
 		primaryTF_5.setColumns(10);
 		primaryTF_5.setBounds(394, 651, 116, 22);
+		primaryTF_5.setVisible(false);
 		OPOD.add(primaryTF_5);
 		
 		// primary text field 6 in OPOD page
 		primaryTF_6 = new JTextField();
 		primaryTF_6.setColumns(10);
 		primaryTF_6.setBounds(394, 678, 116, 22);
+		primaryTF_6.setVisible(false);
 		OPOD.add(primaryTF_6);
 		
 		// primary text field 7 in OPOD page
 		primaryTF_7 = new JTextField();
 		primaryTF_7.setColumns(10);
 		primaryTF_7.setBounds(394, 705, 116, 22);
+		primaryTF_7.setVisible(false);
 		OPOD.add(primaryTF_7);
 		
 		// primary text field 8 in OPOD page
 		primaryTF_8 = new JTextField();
 		primaryTF_8.setColumns(10);
 		primaryTF_8.setBounds(394, 730, 116, 22);
+		primaryTF_8.setVisible(false);
 		OPOD.add(primaryTF_8);
 		
 		// backup type text field 1 in OPOD page
@@ -812,42 +1056,49 @@ public class GUI {
 		backupTypeTF_2 = new JTextField();
 		backupTypeTF_2.setColumns(10);
 		backupTypeTF_2.setBounds(525, 569, 116, 22);
+		backupTypeTF_2.setVisible(false);
 		OPOD.add(backupTypeTF_2);
 		
 		// backup type text field 3 in OPOD page
 		backupTypeTF_3 = new JTextField();
 		backupTypeTF_3.setColumns(10);
 		backupTypeTF_3.setBounds(525, 597, 116, 22);
+		backupTypeTF_3.setVisible(false);
 		OPOD.add(backupTypeTF_3);
 		
 		// backup type text field 4 in OPOD page
 		backupTypeTF_4 = new JTextField();
 		backupTypeTF_4.setColumns(10);
 		backupTypeTF_4.setBounds(525, 624, 116, 22);
+		backupTypeTF_4.setVisible(false);
 		OPOD.add(backupTypeTF_4);
 		
 		// backup type text field 5 in OPOD page
 		backupTypeTF_5 = new JTextField();
 		backupTypeTF_5.setColumns(10);
 		backupTypeTF_5.setBounds(525, 651, 116, 22);
+		backupTypeTF_5.setVisible(false);
 		OPOD.add(backupTypeTF_5);
 		
 		// backup type text field 6 in OPOD page
 		backupTypeTF_6 = new JTextField();
 		backupTypeTF_6.setColumns(10);
 		backupTypeTF_6.setBounds(525, 678, 116, 22);
+		backupTypeTF_6.setVisible(false);
 		OPOD.add(backupTypeTF_6);
 		
 		// backup type text field 7 in OPOD page
 		backupTypeTF_7 = new JTextField();
 		backupTypeTF_7.setColumns(10);
 		backupTypeTF_7.setBounds(525, 705, 116, 22);
+		backupTypeTF_7.setVisible(false);
 		OPOD.add(backupTypeTF_7);
 		
 		// backup type text field 8 in OPOD page
 		backupTypeTF_8 = new JTextField();
 		backupTypeTF_8.setColumns(10);
 		backupTypeTF_8.setBounds(525, 730, 116, 22);
+		backupTypeTF_8.setVisible(false);
 		OPOD.add(backupTypeTF_8);
 		
 		// label for total new asm disk groups in OPOD page
