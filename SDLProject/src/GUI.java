@@ -28,10 +28,73 @@ import javax.swing.JComboBox;
 import java.awt.Component;
 import javax.swing.Box;
 import javax.swing.JSeparator;
+import javax.swing.JTextField;
 
 public class GUI {
 
 	public JFrame frame;
+	private JTextField logicalName_1;
+	private JTextField logicalName_2;
+	private JTextField logicalName_3;
+	private JTextField logicalName_4;
+	private JTextField logicalName_5;
+	private JTextField logicalName_6;
+	private JTextField logicalName_7;
+	private JTextField logicalName_8;
+	private JTextField logicalName_9;
+	private JTextField logicalName_10;
+	private JTextField relationship_1;
+	private JTextField relationship_2;
+	private JTextField relationship_3;
+	private JTextField relationship_4;
+	private JTextField relationship_5;
+	private JTextField relationship_6;
+	private JTextField relationshp_7;
+	private JTextField relationship_8;
+	private JTextField relationship_9;
+	private JTextField relationship_10;
+	private JTextField clusterNameTF;
+	private JTextField databaseName_1;
+	private JTextField databaseName_2;
+	private JTextField databaseName_3;
+	private JTextField databaseName_4;
+	private JTextField databaseName_5;
+	private JTextField databaseName_6;
+	private JTextField databaseName_7;
+	private JTextField databaseName_8;
+	private JTextField version_1;
+	private JTextField version_2;
+	private JTextField version_3;
+	private JTextField version_4;
+	private JTextField version_5;
+	private JTextField version_6;
+	private JTextField version_7;
+	private JTextField version_8;
+	private JTextField relationshipTF_1;
+	private JTextField relationshipTF_2;
+	private JTextField relationshipTF_3;
+	private JTextField relationshipTF_4;
+	private JTextField relationshipTF_5;
+	private JTextField relationshipTF_6;
+	private JTextField relationshipTF_7;
+	private JTextField relationshipTF_8;
+	private JTextField primaryTF_1;
+	private JTextField primaryTF_2;
+	private JTextField primaryTF_3;
+	private JTextField primaryTF_4;
+	private JTextField primaryTF_5;
+	private JTextField primaryTF_6;
+	private JTextField primaryTF_7;
+	private JTextField primaryTF_8;
+	private JTextField backupTypeTF_1;
+	private JTextField backupTypeTF_2;
+	private JTextField backupTypeTF_3;
+	private JTextField backupTypeTF_4;
+	private JTextField backupTypeTF_5;
+	private JTextField backupTypeTF_6;
+	private JTextField backupTypeTF_7;
+	private JTextField backupTypeTF_8;
+	private JTextField serverOrderNumTF;
 
 	/**
 	 * Create the application.
@@ -47,7 +110,7 @@ public class GUI {
 
 		// The frame to be used throughout the program
 		frame = new JFrame();
-		frame.setBounds(100, 100, 804, 905);
+		frame.setBounds(100, 100, 1004, 905);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new CardLayout(0, 0));
 		frame.setResizable(false);
@@ -231,8 +294,615 @@ public class GUI {
 		lblOpod.setFont(new Font("Times New Roman", Font.PLAIN, 25));
 		lblOpod.setBounds(10, 11, 753, 34);
 		OPOD.add(lblOpod);
+		
+		// Question for unix server count on Opod page
+		JLabel unixServerCountQuestionOPOD = new JLabel("How many Unix Server(s) total are planned?");
+		unixServerCountQuestionOPOD.setBounds(10, 109, 254, 14);
+		OPOD.add(unixServerCountQuestionOPOD);
 
-		// New panel for the hadoop page
+		// Description of required fields for OPOD Page
+		JLabel requiredFieldsOPOD = new JLabel("Required UNIQUE fields to be filled in prior to selecting the SHS Option");
+		requiredFieldsOPOD.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		requiredFieldsOPOD.setBounds(10, 57, 435, 14);
+		OPOD.add(requiredFieldsOPOD);
+
+		// The server count for opod
+		String[] numServersOPOD = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+		JComboBox unixServerCountOPOD = new JComboBox(numServersOPOD);
+		unixServerCountOPOD.setBackground(Color.YELLOW);
+		unixServerCountOPOD.setBounds(338, 106, 276, 20);
+		unixServerCountOPOD.setSelectedItem("2");
+		OPOD.add(unixServerCountOPOD);
+
+		// Environment comboBox for OPOD
+		String[] environmentsOPOD = { "", "Production", "Pre-Production", "Training", "Continuity", "eTest", "Test", "Development",
+									  "Lab", "TPT"};
+		JComboBox environmentCBOPOD = new JComboBox(environmentsOPOD);
+		environmentCBOPOD.setBackground(Color.YELLOW);
+		environmentCBOPOD.setBounds(338, 139, 276, 20);
+		OPOD.add(environmentCBOPOD);
+
+		// Label for Environment comboBox for OPOD
+		JLabel environmentlblOPOD = new JLabel("Environment Selection");
+		environmentlblOPOD.setBounds(10, 142, 254, 14);
+		OPOD.add(environmentlblOPOD);
+
+		// Combo Box for OPOD Buis Units
+		String[] buisUnitsOPOD = { "", "Affinity", "Agency Distribution - Sales", "ALMCO", "Allstate Benefits",
+				"Allstate Buisness Insurance (Commerical)", "Allstate Dealer Services(Credit Division)",
+				"Allstate Finance Company", "Allstate Financial Technology", "Allstate Independent Agents",
+				"Allstate Investments", "Allstate Roadside Services (ARS)", "Allstate Solutions Private Limited (ASPL)",
+				"Allstate Vehicle & Property(AVPIC)", "ANI", "ANJ", "Architecture & Simplification", "ASAP", "ASIC",
+				"ATO - PROD OPS", "ATO Finance", "ATO Strategy", "B2B Technology", "Broker Dealer", "Canada", "CEO COO",
+				"CIC", "Claims", "Claims Technology Services", "Connected Car Technologies", "Consumer Household(SPL)",
+				"Corporate Relations", "Customer Experience & Retention", "Dealer Lab", "Delivery & Risk Management",
+				"Direct Channel of Bind - CIC", "Direct Channel of Bind - Internet",
+				"DRM - Buisness/Application Architecture", "DRM - Enterprise Testing & Release Mgmt",
+				"DRM - Information Security", "DRM - Program Management Office", "DRM - Risk Mgmt & Compliance",
+				"Encompass", "Encompass Claims", "Encompass Support", "Enterprise", "Enterprise Shared Services",
+				"Esurance", "Facility Services", "Finance", "Human Resources", "Information Services Group",
+				"Infrastructure Services", "Investments Technology", "IS - ANI IS",
+				"IS - Client & Middleware Platforms", "IS - Foundation Platforms", "IS - Infrastructure Operations",
+				"IS - Network Services", "IS - Product Operations", "IS - Production Processes",
+				"IS - Server Platforms", "IS - Solutions Enginerring & Service Mgmt",
+				"ISG - Business Intelligence & Analytics", "ISG - Customer Data Strategy & Data Quality",
+				"ISG - Data Solutions", "ISG - Database Administrator", "ISG - ICS/Customer Data Strategy",
+				"ISG - Intgrated Customer Services", "IVANTAGE", "Kennet", "Law & Reg Claim Litigation",
+				"Law & Regulation", "Life", "Marketing", "Motor Club", "North Light", "Northbrook Services",
+				"Operations", "Ops - ATO Effectiveness & Engagement", "Ops - BPM & Quality",
+				"Ops - Business Process Competency Center", "Ops - Business Process Delivery",
+				"Ops - Enterprise Support", "Ops - Global Delivery Integration & Sourcing", "Ops - Operations CIO",
+				"Ops - Policy Administration", "Ops - Processing Support for Claims",
+				"Ops - Selling Policies & Agency Support", "Partnership Marketing  Group (PMG)", "Personal Lines",
+				"Personal Lines - California", "Personal Lines(Exc.ANJ)", "Personal Lines(Incl.ANJ)",
+				"Protection Risk & Return Mgmt", "Real Estate & Construction", "Research Center", "RMBC",
+				"Sales, Mktg & Customer Experience", "SMCE - Agency Facing", "SMCE - Customer Facing",
+				"Sourcing & Procurement Solutions", "Specialty Ops", "Sterling", "Techcor", "Technology Solutions" };
+		JComboBox buisUnitOPOD = new JComboBox(buisUnitsOPOD);
+		buisUnitOPOD.setBackground(Color.YELLOW);
+		buisUnitOPOD.setBounds(280, 183, 334, 20);
+		buisUnitOPOD.setSelectedItem("Enterprise");
+		OPOD.add(buisUnitOPOD);
+
+		// Label for Buis Units on OPOD Page
+		JLabel businesslblOPOD = new JLabel("Business Unit");
+		businesslblOPOD.setBounds(10, 186, 254, 14);
+		OPOD.add(businesslblOPOD);
+
+		// Label for Enterprise Controller on OPOD page
+		JLabel entContOPOD = new JLabel("Enterprise Controller");
+		entContOPOD.setBounds(10, 252, 140, 14);
+		OPOD.add(entContOPOD);
+
+		// Data center label for OPOD
+		JLabel dataCentlblOPOD = new JLabel("Data Center");
+		dataCentlblOPOD.setBounds(10, 219, 120, 14);
+		OPOD.add(dataCentlblOPOD);
+
+		// Data center options for OPOD
+		String[] opsOPOD = { "", "Hudson", "Rochelle" };
+		JComboBox dataCentOpsOPOD = new JComboBox(opsOPOD);
+		dataCentOpsOPOD.setBackground(Color.YELLOW);
+		dataCentOpsOPOD.setBounds(338, 216, 276, 20);
+		OPOD.add(dataCentOpsOPOD);
+
+		// Enterprise Options combo box for OPOD
+		String[] entOpsOPOD = { "None", "sxm0029", "sxm0034" };
+		JComboBox enterpriseCBOPOD = new JComboBox(entOpsOPOD);
+		enterpriseCBOPOD.setBackground(Color.YELLOW);
+		enterpriseCBOPOD.setBounds(338, 249, 276, 20);
+		OPOD.add(enterpriseCBOPOD);
+
+		JComboBox securityCBOPOD = new JComboBox();
+		securityCBOPOD.setBackground(new Color(216, 191, 216));
+		securityCBOPOD.setBounds(338, 288, 276, 20);
+		OPOD.add(securityCBOPOD);
+
+		// Wing location Options for OPOD
+		String[] wingOpsOPOD = { "", "East", "West" };
+		JComboBox wingCBOPOD = new JComboBox(wingOpsOPOD);
+		wingCBOPOD.setBackground(new Color(175, 238, 238));
+		wingCBOPOD.setBounds(338, 359, 276, 20);
+		OPOD.add(wingCBOPOD);
+
+		// Security zone label for OPOD
+		JLabel secZonelblOPOD = new JLabel("Security Zone");
+		secZonelblOPOD.setBounds(10, 291, 140, 14);
+		OPOD.add(secZonelblOPOD);
+
+		// Wing lbl for OPOD
+		JLabel lblWingLocationInOPOD = new JLabel("Wing Location in the DC");
+		lblWingLocationInOPOD.setBounds(10, 359, 140, 14);
+		OPOD.add(lblWingLocationInOPOD);
+		
+		// Label for vpool storage array in OPOD page
+		JLabel lblVpoolStorageArray = new JLabel("vpool Storage Array");
+		lblVpoolStorageArray.setBounds(10, 393, 193, 16);
+		OPOD.add(lblVpoolStorageArray);
+		
+		// combo box for vpool storage array in OPOD page
+		String[] vpoolOpts = {"", "Storage_Subsystem_1001446", "Storage_Subsystem_1001646", "Storage_Subsystem_1099", 
+							  "Storage_Subsystem_1201999", "Storage_Subsystem_1415", "Storage_Subsystem_17335", "Storage_Subsystem_28573",
+							  "Storage_Subsystem_4547", "Storage_Subsystem_48504", "Storage_Subsystem_4961", "Storage_Subsystem_5018",
+							  "Storage_Subsystem_54071", "Storage_Subsystem_55290", "Storage_Subsystem_55300", "Storage_Subsystem_55401",
+							  "Storage_Subsystem_65197", "Storage_Subsystem_65278", "Storage_Subsystem_65284", "Storage_Subsystem_65301",
+							  "Storage_Subsystem_65302", "Storage_Subsystem_65383", "Storage_Subsystem_65579", "Storage_Subsystem_66539",
+							  "Storage_Subsystem_66796", "Storage_Subsystem_66804", "Storage_Subsystem_66897"};
+		JComboBox vpoolCBOPOD = new JComboBox(vpoolOpts);
+		vpoolCBOPOD.setBackground(new Color(175, 238, 238));
+		vpoolCBOPOD.setBounds(338, 392, 276, 20);
+		OPOD.add(vpoolCBOPOD);
+		
+		// label for Logical Names in OPOD page
+		JLabel lblLogicalNames = new JLabel("Logical Names");
+		lblLogicalNames.setBounds(681, 56, 107, 16);
+		OPOD.add(lblLogicalNames);
+		
+		// label for server relationship in OPOD page
+		JLabel lblServerRelationship = new JLabel("Server Relationship");
+		lblServerRelationship.setBounds(828, 56, 128, 16);
+		OPOD.add(lblServerRelationship);
+		
+		// logical name text field 1 in OPOD page
+		logicalName_1 = new JTextField();
+		logicalName_1.setBounds(672, 85, 116, 22);
+		OPOD.add(logicalName_1);
+		logicalName_1.setColumns(10);
+		
+		// logical name text field 2 in OPOD page
+		logicalName_2 = new JTextField();
+		logicalName_2.setColumns(10);
+		logicalName_2.setBounds(672, 115, 116, 22);
+		OPOD.add(logicalName_2);
+		
+		// logical name text field 3 in OPOD page
+		logicalName_3 = new JTextField();
+		logicalName_3.setColumns(10);
+		logicalName_3.setBounds(672, 147, 116, 22);
+		OPOD.add(logicalName_3);
+		
+		// logical name text field 4 in OPOD page
+		logicalName_4 = new JTextField();
+		logicalName_4.setColumns(10);
+		logicalName_4.setBounds(672, 182, 116, 22);
+		OPOD.add(logicalName_4);
+		
+		// logical name text field 5 in OPOD page
+		logicalName_5 = new JTextField();
+		logicalName_5.setColumns(10);
+		logicalName_5.setBounds(672, 216, 116, 22);
+		OPOD.add(logicalName_5);
+		
+		// logical name text field 6 in OPOD page
+		logicalName_6 = new JTextField();
+		logicalName_6.setColumns(10);
+		logicalName_6.setBounds(672, 252, 116, 22);
+		OPOD.add(logicalName_6);
+		
+		// logical name text field 7 in OPOD page
+		logicalName_7 = new JTextField();
+		logicalName_7.setColumns(10);
+		logicalName_7.setBounds(672, 287, 116, 22);
+		OPOD.add(logicalName_7);
+		
+		// logical name text field 8 in OPOD page
+		logicalName_8 = new JTextField();
+		logicalName_8.setColumns(10);
+		logicalName_8.setBounds(672, 322, 116, 22);
+		OPOD.add(logicalName_8);
+		
+		// logical name text field 9 in OPOD page
+		logicalName_9 = new JTextField();
+		logicalName_9.setColumns(10);
+		logicalName_9.setBounds(672, 355, 116, 22);
+		OPOD.add(logicalName_9);
+		
+		// logical name text field 10 in OPOD page
+		logicalName_10 = new JTextField();
+		logicalName_10.setColumns(10);
+		logicalName_10.setBounds(672, 390, 116, 22);
+		OPOD.add(logicalName_10);
+		
+		// server relationship text field 1 in OPOD page
+		relationship_1 = new JTextField();
+		relationship_1.setBounds(828, 85, 116, 22);
+		OPOD.add(relationship_1);
+		relationship_1.setColumns(10);
+		
+		// server relationship text field 2 in OPOD page
+		relationship_2 = new JTextField();
+		relationship_2.setColumns(10);
+		relationship_2.setBounds(828, 115, 116, 22);
+		OPOD.add(relationship_2);
+		
+		// server relationship text field 3 in OPOD page
+		relationship_3 = new JTextField();
+		relationship_3.setColumns(10);
+		relationship_3.setBounds(828, 147, 116, 22);
+		OPOD.add(relationship_3);
+		
+		// server relationship text field 4 in OPOD page
+		relationship_4 = new JTextField();
+		relationship_4.setColumns(10);
+		relationship_4.setBounds(828, 182, 116, 22);
+		OPOD.add(relationship_4);
+		
+		// server relationship text field 5 in OPOD page
+		relationship_5 = new JTextField();
+		relationship_5.setColumns(10);
+		relationship_5.setBounds(828, 216, 116, 22);
+		OPOD.add(relationship_5);
+		
+		// server relationship text field 6 in OPOD page
+		relationship_6 = new JTextField();
+		relationship_6.setColumns(10);
+		relationship_6.setBounds(828, 252, 116, 22);
+		OPOD.add(relationship_6);
+		
+		// server relationship text field 7 in OPOD page
+		relationshp_7 = new JTextField();
+		relationshp_7.setColumns(10);
+		relationshp_7.setBounds(828, 287, 116, 22);
+		OPOD.add(relationshp_7);
+		
+		// server relationship text field 8 in OPOD page
+		relationship_8 = new JTextField();
+		relationship_8.setColumns(10);
+		relationship_8.setBounds(828, 322, 116, 22);
+		OPOD.add(relationship_8);
+		
+		// server relationship text field 9 in OPOD page
+		relationship_9 = new JTextField();
+		relationship_9.setColumns(10);
+		relationship_9.setBounds(828, 355, 116, 22);
+		OPOD.add(relationship_9);
+		
+		// server relationship text field 10 in OPOD page
+		relationship_10 = new JTextField();
+		relationship_10.setColumns(10);
+		relationship_10.setBounds(828, 390, 116, 22);
+		OPOD.add(relationship_10);
+		
+		// label for cluster name in OPOD page
+		JLabel lblClusterName = new JLabel("Cluster Name");
+		lblClusterName.setBounds(10, 457, 140, 16);
+		OPOD.add(lblClusterName);
+		
+		// cluster name text field in OPOD page
+		clusterNameTF = new JTextField();
+		clusterNameTF.setBounds(223, 454, 116, 22);
+		OPOD.add(clusterNameTF);
+		clusterNameTF.setColumns(10);
+		
+		// label for how many databases question in OPOD page
+		JLabel lblHowManyDatabases = new JLabel("How many Databases (Max. 8)?");
+		lblHowManyDatabases.setBounds(10, 486, 210, 16);
+		OPOD.add(lblHowManyDatabases);
+		
+		// number of databases combo box in OPOD page
+		String[] numDatabasesOpts = {"1", "2", "3", "4", "5", "6", "7", "8"};
+		JComboBox numDatabasesCB = new JComboBox(numDatabasesOpts);
+		numDatabasesCB.setBounds(223, 483, 116, 22);
+		OPOD.add(numDatabasesCB);
+		
+		// label for Database name in OPOD page
+		JLabel lblDatabaseName = new JLabel("Database Name");
+		lblDatabaseName.setBounds(10, 515, 107, 16);
+		OPOD.add(lblDatabaseName);
+		
+		// label for Version in OPOD page
+		JLabel lblVersion = new JLabel("Version");
+		lblVersion.setBounds(167, 515, 56, 16);
+		OPOD.add(lblVersion);
+		
+		// label for relationship in OPOD page
+		JLabel lblRelationship = new JLabel("Relationship");
+		lblRelationship.setBounds(280, 515, 86, 16);
+		OPOD.add(lblRelationship);
+		
+		// label for primary in OPOD page
+		JLabel lblPrimary = new JLabel("Primary");
+		lblPrimary.setBounds(422, 515, 56, 16);
+		OPOD.add(lblPrimary);
+		
+		// label for backup type in OPOD page
+		JLabel lblBackupType = new JLabel("Backup Type");
+		lblBackupType.setBounds(541, 515, 95, 16);
+		OPOD.add(lblBackupType);
+		
+		// database name text field 1 in OPOD page
+		databaseName_1 = new JTextField();
+		databaseName_1.setBounds(10, 544, 116, 22);
+		OPOD.add(databaseName_1);
+		databaseName_1.setColumns(10);
+		
+		// database name text field 2 in OPOD page
+		databaseName_2 = new JTextField();
+		databaseName_2.setColumns(10);
+		databaseName_2.setBounds(10, 569, 116, 22);
+		OPOD.add(databaseName_2);
+		
+		// database name text field 3 in OPOD page
+		databaseName_3 = new JTextField();
+		databaseName_3.setColumns(10);
+		databaseName_3.setBounds(10, 597, 116, 22);
+		OPOD.add(databaseName_3);
+		
+		// database name text field 4 in OPOD page
+		databaseName_4 = new JTextField();
+		databaseName_4.setColumns(10);
+		databaseName_4.setBounds(10, 624, 116, 22);
+		OPOD.add(databaseName_4);
+		
+		// database name text field 5 in OPOD page
+		databaseName_5 = new JTextField();
+		databaseName_5.setColumns(10);
+		databaseName_5.setBounds(10, 651, 116, 22);
+		OPOD.add(databaseName_5);
+		
+		// database name text field 6 in OPOD page
+		databaseName_6 = new JTextField();
+		databaseName_6.setColumns(10);
+		databaseName_6.setBounds(10, 678, 116, 22);
+		OPOD.add(databaseName_6);
+		
+		// database name text field 7 in OPOD page
+		databaseName_7 = new JTextField();
+		databaseName_7.setColumns(10);
+		databaseName_7.setBounds(10, 705, 116, 22);
+		OPOD.add(databaseName_7);
+		
+		// database name text field 8 in OPOD page
+		databaseName_8 = new JTextField();
+		databaseName_8.setColumns(10);
+		databaseName_8.setBounds(10, 730, 116, 22);
+		OPOD.add(databaseName_8);
+		
+		// version text field 1 in OPOD page
+		version_1 = new JTextField();
+		version_1.setBounds(138, 544, 116, 22);
+		OPOD.add(version_1);
+		version_1.setColumns(10);
+		
+		// version text field 2 in OPOD page
+		version_2 = new JTextField();
+		version_2.setColumns(10);
+		version_2.setBounds(138, 569, 116, 22);
+		OPOD.add(version_2);
+		
+		// version text field 3 in OPOD page
+		version_3 = new JTextField();
+		version_3.setColumns(10);
+		version_3.setBounds(138, 597, 116, 22);
+		OPOD.add(version_3);
+		
+		// version text field 4 in OPOD page
+		version_4 = new JTextField();
+		version_4.setColumns(10);
+		version_4.setBounds(138, 624, 116, 22);
+		OPOD.add(version_4);
+		
+		// version text field 5 in OPOD page
+		version_5 = new JTextField();
+		version_5.setColumns(10);
+		version_5.setBounds(138, 651, 116, 22);
+		OPOD.add(version_5);
+		
+		// version text field 6 in OPOD page
+		version_6 = new JTextField();
+		version_6.setColumns(10);
+		version_6.setBounds(138, 678, 116, 22);
+		OPOD.add(version_6);
+		
+		// version text field 7 in OPOD page
+		version_7 = new JTextField();
+		version_7.setColumns(10);
+		version_7.setBounds(138, 705, 116, 22);
+		OPOD.add(version_7);
+		
+		// version text field 8 in OPOD page
+		version_8 = new JTextField();
+		version_8.setColumns(10);
+		version_8.setBounds(138, 730, 116, 22);
+		OPOD.add(version_8);
+		
+		// relationship text field 1 in OPOD page
+		relationshipTF_1 = new JTextField();
+		relationshipTF_1.setBounds(266, 544, 116, 22);
+		OPOD.add(relationshipTF_1);
+		relationshipTF_1.setColumns(10);
+		
+		// relationship text field 2 in OPOD page
+		relationshipTF_2 = new JTextField();
+		relationshipTF_2.setColumns(10);
+		relationshipTF_2.setBounds(266, 569, 116, 22);
+		OPOD.add(relationshipTF_2);
+		
+		// relationship text field 3 in OPOD page
+		relationshipTF_3 = new JTextField();
+		relationshipTF_3.setColumns(10);
+		relationshipTF_3.setBounds(266, 597, 116, 22);
+		OPOD.add(relationshipTF_3);
+		
+		// relationship text field 4 in OPOD page
+		relationshipTF_4 = new JTextField();
+		relationshipTF_4.setColumns(10);
+		relationshipTF_4.setBounds(266, 624, 116, 22);
+		OPOD.add(relationshipTF_4);
+		
+		// relationship text field 5 in OPOD page
+		relationshipTF_5 = new JTextField();
+		relationshipTF_5.setColumns(10);
+		relationshipTF_5.setBounds(266, 651, 116, 22);
+		OPOD.add(relationshipTF_5);
+		
+		// relationship text field 6 in OPOD page
+		relationshipTF_6 = new JTextField();
+		relationshipTF_6.setColumns(10);
+		relationshipTF_6.setBounds(266, 678, 116, 22);
+		OPOD.add(relationshipTF_6);
+		
+		// relationship text field 7 in OPOD page
+		relationshipTF_7 = new JTextField();
+		relationshipTF_7.setColumns(10);
+		relationshipTF_7.setBounds(266, 705, 116, 22);
+		OPOD.add(relationshipTF_7);
+		
+		// relationship text field 8 in OPOD page
+		relationshipTF_8 = new JTextField();
+		relationshipTF_8.setColumns(10);
+		relationshipTF_8.setBounds(266, 730, 116, 22);
+		OPOD.add(relationshipTF_8);
+		
+		// primary text field 1 in OPOD page
+		primaryTF_1 = new JTextField();
+		primaryTF_1.setColumns(10);
+		primaryTF_1.setBounds(394, 544, 116, 22);
+		OPOD.add(primaryTF_1);
+		
+		// primary text field 2 in OPOD page
+		primaryTF_2 = new JTextField();
+		primaryTF_2.setColumns(10);
+		primaryTF_2.setBounds(394, 569, 116, 22);
+		OPOD.add(primaryTF_2);
+		
+		// primary text field 3 in OPOD page
+		primaryTF_3 = new JTextField();
+		primaryTF_3.setColumns(10);
+		primaryTF_3.setBounds(394, 597, 116, 22);
+		OPOD.add(primaryTF_3);
+		
+		// primary text field 4 in OPOD page
+		primaryTF_4 = new JTextField();
+		primaryTF_4.setColumns(10);
+		primaryTF_4.setBounds(394, 624, 116, 22);
+		OPOD.add(primaryTF_4);
+		
+		// primary text field 5 in OPOD page
+		primaryTF_5 = new JTextField();
+		primaryTF_5.setColumns(10);
+		primaryTF_5.setBounds(394, 651, 116, 22);
+		OPOD.add(primaryTF_5);
+		
+		// primary text field 6 in OPOD page
+		primaryTF_6 = new JTextField();
+		primaryTF_6.setColumns(10);
+		primaryTF_6.setBounds(394, 678, 116, 22);
+		OPOD.add(primaryTF_6);
+		
+		// primary text field 7 in OPOD page
+		primaryTF_7 = new JTextField();
+		primaryTF_7.setColumns(10);
+		primaryTF_7.setBounds(394, 705, 116, 22);
+		OPOD.add(primaryTF_7);
+		
+		// primary text field 8 in OPOD page
+		primaryTF_8 = new JTextField();
+		primaryTF_8.setColumns(10);
+		primaryTF_8.setBounds(394, 730, 116, 22);
+		OPOD.add(primaryTF_8);
+		
+		// backup type text field 1 in OPOD page
+		backupTypeTF_1 = new JTextField();
+		backupTypeTF_1.setColumns(10);
+		backupTypeTF_1.setBounds(525, 544, 116, 22);
+		OPOD.add(backupTypeTF_1);
+		
+		// backup type text field 2 in OPOD page
+		backupTypeTF_2 = new JTextField();
+		backupTypeTF_2.setColumns(10);
+		backupTypeTF_2.setBounds(525, 569, 116, 22);
+		OPOD.add(backupTypeTF_2);
+		
+		// backup type text field 3 in OPOD page
+		backupTypeTF_3 = new JTextField();
+		backupTypeTF_3.setColumns(10);
+		backupTypeTF_3.setBounds(525, 597, 116, 22);
+		OPOD.add(backupTypeTF_3);
+		
+		// backup type text field 4 in OPOD page
+		backupTypeTF_4 = new JTextField();
+		backupTypeTF_4.setColumns(10);
+		backupTypeTF_4.setBounds(525, 624, 116, 22);
+		OPOD.add(backupTypeTF_4);
+		
+		// backup type text field 5 in OPOD page
+		backupTypeTF_5 = new JTextField();
+		backupTypeTF_5.setColumns(10);
+		backupTypeTF_5.setBounds(525, 651, 116, 22);
+		OPOD.add(backupTypeTF_5);
+		
+		// backup type text field 6 in OPOD page
+		backupTypeTF_6 = new JTextField();
+		backupTypeTF_6.setColumns(10);
+		backupTypeTF_6.setBounds(525, 678, 116, 22);
+		OPOD.add(backupTypeTF_6);
+		
+		// backup type text field 7 in OPOD page
+		backupTypeTF_7 = new JTextField();
+		backupTypeTF_7.setColumns(10);
+		backupTypeTF_7.setBounds(525, 705, 116, 22);
+		OPOD.add(backupTypeTF_7);
+		
+		// backup type text field 8 in OPOD page
+		backupTypeTF_8 = new JTextField();
+		backupTypeTF_8.setColumns(10);
+		backupTypeTF_8.setBounds(525, 730, 116, 22);
+		OPOD.add(backupTypeTF_8);
+		
+		// label for total new asm disk groups in OPOD page
+		JLabel lblTotalNewAsm = new JLabel("Total New ASM Disk Groups");
+		lblTotalNewAsm.setBounds(10, 765, 193, 16);
+		OPOD.add(lblTotalNewAsm);
+		
+		// Combo box for number of disk groups in OPOD page
+		String[] numDiskGroupsOpts = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"};
+		JComboBox numDiskGroups = new JComboBox(numDiskGroupsOpts);
+		numDiskGroups.setBounds(266, 762, 193, 22);
+		OPOD.add(numDiskGroups);
+		
+		// label for Dell R730 (8 Cores - 384GB Mem. Opt.) in OPOD page
+		JLabel lblDellR = new JLabel("Dell R730 (8 Cores - 384GB Mem. Opt.)");
+		lblDellR.setBounds(10, 794, 230, 16);
+		OPOD.add(lblDellR);
+		
+		// label for Dell R730 (16 Cores - 512GB Mem. Opt.) in OPOD page
+		JLabel lblDellR_1 = new JLabel("Dell R730 (16 Cores - 512GB Mem. Opt.)");
+		lblDellR_1.setBounds(263, 794, 247, 16);
+		OPOD.add(lblDellR_1);
+		
+		// label for HP DL560p (24 Cores - 1024GB Mem. Opt.) in OPOD page
+		JLabel lblHpDlp = new JLabel("HP DL560p (24 Cores - 1024GB Mem. Opt.)");
+		lblHpDlp.setBounds(525, 794, 263, 16);
+		OPOD.add(lblHpDlp);
+		
+		// Button for Oracle POD SHS CFG10 in OPOD page
+		JButton btnOraclePodShs = new JButton("Oracle POD SHS CFG10");
+		btnOraclePodShs.setBounds(10, 823, 230, 34);
+		OPOD.add(btnOraclePodShs);
+		
+		// Button for Oracle POD SHS CFG11 in OPOD page
+		JButton btnOraclePodShs_1 = new JButton("Oracle POD SHS CFG11");
+		btnOraclePodShs_1.setBounds(266, 823, 244, 34);
+		OPOD.add(btnOraclePodShs_1);
+		
+		// Button for Oracle POD SHS CFG09 in OPOD page
+		JButton btnOraclePodShs_2 = new JButton("Oracle POD SHS CFG09");
+		btnOraclePodShs_2.setBounds(525, 823, 263, 34);
+		OPOD.add(btnOraclePodShs_2);
+		
+		// Label for server order number in OPOD page
+		JLabel lblServerOrderNumber = new JLabel("Server Order Number");
+		lblServerOrderNumber.setBounds(12, 325, 252, 16);
+		OPOD.add(lblServerOrderNumber);
+		
+		// text field for server order number in OPOD page
+		serverOrderNumTF = new JTextField();
+		serverOrderNumTF.setBounds(338, 321, 276, 22);
+		OPOD.add(serverOrderNumTF);
+		serverOrderNumTF.setColumns(10);
+
+		// New panel for the OPOD page
 		JPanel Hadoop = new JPanel();
 		frame.getContentPane().add(Hadoop, "name_235116866424390");
 		Hadoop.setLayout(null);
