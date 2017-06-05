@@ -45,9 +45,6 @@ public class GUI {
 
 	// Initialize method to start the gui
 	private void initialize() throws URISyntaxException {
-
-		Parser parser = new Parser();
-		parser.parse_text_files();
 		
 		// The frame to be used throughout the program
 		frame = new JFrame();
